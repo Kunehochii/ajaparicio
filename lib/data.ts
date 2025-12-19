@@ -5,6 +5,7 @@ export const portfolioData = {
     location: "Iloilo City, Philippines",
     phone: "+63 969 100 0317",
     email: "aparicio.anthonyjohn@gmail.com",
+    image: "/aj_formal.png",
     socials: {
       linkedin: "https://www.linkedin.com/in/ajaparicio36/",
       github: "https://github.com/ajaparicio36",
@@ -12,38 +13,38 @@ export const portfolioData = {
   },
   hero: {
     headline:
-      "Engineering scalable backend architectures and AI-integrated mobile solutions that drive operational efficiency for modern businesses.",
+      "Building scalable backends and AI-driven mobile solutions.",
     subHeadline:
-      "Junior Backend Engineer specializing in the PERN stack and Flutter. I build stable, high-performance systems for startups and enterprises.",
+      "I engineer high-performance systems for startups and enterprises, specializing in the PERN stack and Flutter.",
   },
   about:
-    "My engineering philosophy centers on the intersection of robust architecture and user-centric utility. As a Full-Stack Engineer specializing in backend systems and mobile development, I focus on building applications that are not only performant but also maintainable and scalable. I transition complex business requirements into clean, type-safe code, prioritizing system stability and rapid deployment cycles using modern CI/CD practices.\n\nCurrently completing my degree while working professionally, I have accelerated my growth by leading development cycles for startups and handling production-grade DevOps. I am driven by technical challenges that require integrating emerging technologies—specifically Artificial Intelligence and IoT—into practical workflows that solve tangible real-world problems, from logistics optimization to automated educational tools.",
+    "I build robust, user-centric applications where architecture meets utility. As a Full-Stack Engineer, I turn complex requirements into clean, type-safe code, prioritizing stability and speed.\n\nLeading development cycles and managing production DevOps has fast-tracked my growth. I thrive on integrating AI and IoT into practical workflows—solving real problems, from logistics to education.",
   skills: {
     backend: [
       "NestJS",
-      "Node.js (Express)",
+      "Node.js",
       "Python",
-      "RESTful API Design",
-      "Microservices Architecture",
+      "REST APIs",
+      "Microservices",
     ],
-    frontendMobile: ["Flutter (Dart)", "Next.js", "React", "Tailwind CSS"],
+    frontendMobile: ["Flutter", "Next.js", "React", "Tailwind CSS"],
     database: [
       "PostgreSQL",
-      "Prisma ORM",
+      "Prisma",
       "TypeORM",
-      "Database Modeling & Optimization",
+      "Optimization",
     ],
     devOps: [
       "Docker",
-      "CI/CD Pipeline Configuration",
-      "Linux Administration",
-      "Cloud Deployment",
+      "CI/CD",
+      "Linux",
+      "Cloud",
     ],
     aiIot: [
-      "OpenAI API (Tool Calling)",
-      "Computer Vision basics",
+      "OpenAI API",
+      "Computer Vision",
       "Raspberry Pi",
-      "Hardware Sensors",
+      "Sensors",
     ],
   },
   experience: [
@@ -51,62 +52,59 @@ export const portfolioData = {
       role: "Backend Engineer",
       company: "Allutional",
       description:
-        "High-availability backend development and deployment management. I engineered robust server-side applications using Express.js and Node.js to ensure low-latency performance. My role involved managing deployment pipelines and conducting code reviews to maintain architectural standards and reduce technical debt, consistently optimizing backend logic to meet strict sprint deliverables on time.",
+        "Engineered high-availability server-side apps with Express.js and Node.js. Managed deployment pipelines, enforced architectural standards, and optimized backend logic to consistently meet sprint goals.",
     },
     {
       role: "Junior Software Developer",
       company: "Inertia Ltd.",
       description:
-        "Full-cycle web and mobile development with a focus on QA. I led full-stack development tasks while collaborating on project planning to align features with client goals. I executed comprehensive QA testing protocols to identify edge cases before release, ensuring stable, bug-free deployments for both web and mobile platforms.",
+        "Led full-stack web and mobile development. Collaborated on feature planning and executed rigorous QA protocols to ensure bug-free, stable releases.",
     },
     {
-      role: "Freelance Software Developer",
+      role: "Freelance Developer",
       company: "Self-Employed",
       description:
-        "Delivering bespoke, high-efficiency software across diverse industries. I managed the end-to-end development lifecycle for various clients, delivering scalable solutions ahead of deadlines. I focused on operational efficiency and performance optimization to meet specific business needs, ensuring high client satisfaction and successful project handoffs.",
+        "Delivered bespoke software solutions across industries. Managed the full lifecycle from concept to handoff, focusing on operational efficiency and client satisfaction.",
     },
     {
-      role: "QA Tester & Feature Planner",
+      role: "QA Tester & Planner",
       company: "Yaichi",
       description:
-        "Directed feature planning to ensure alignment between business logistics and technical feasibility. I executed rigorous Quality Assurance protocols, identifying critical edge cases in the shipping logic prior to release, which prevented costly operational errors and ensured high system reliability for international transactions.",
+        "Aligned business logistics with technical feasibility. Executed critical QA testing to catch edge cases, preventing costly errors in cross-border shipping logic.",
     },
   ],
   projects: [
     {
       title: "BayloCentral",
-      role: "Lead Full-Stack Developer & DevOps",
-      stack: ["Next.js", "NestJS", "PostgreSQL", "Docker", "CI/CD"],
+      role: "Lead Full-Stack & DevOps",
+      stack: ["Next.js", "NestJS", "PostgreSQL", "Docker"],
+      image: "/baylocentral_project.png",
       description:
-        "A startup marketplace platform designed to digitize operations for Micro, Small, and Medium Enterprises (MSMEs). Architected the complete full-stack infrastructure, moving the product from concept to deployment. Established a containerized DevOps environment that streamlined updates and reduced deployment friction.",
+        "A digital marketplace for MSMEs. I architected the full-stack infrastructure and containerized DevOps, enabling local merchants to expand beyond physical stores.",
     },
     {
       title: "SnapScore",
-      role: "Lead Backend Engineer (AI Integration) & Mobile Developer",
+      role: "Lead Backend & Mobile",
       stack: ["Flutter", "OpenAI API", "Python"],
+      image: "/snapscore_project.jpg",
       description:
-        "An EdTech mobile application utilizing AI to automate the grading process for physical test papers. Engineered the backend logic to integrate OpenAI’s vision capabilities, converting physical images into structured data for grading. Implemented advanced tool-calling protocols to ensure accurate context interpretation.",
+        "AI-powered grading app. I integrated OpenAI's vision to convert physical test images into structured data, automating grading for educators.",
     },
     {
       title: "Falsisters",
       role: "Lead Developer",
-      stack: ["Flutter", "React/Next.js", "NestJS"],
+      stack: ["Flutter", "React", "NestJS"],
+      image: "/falsisters_project.png",
       description:
-        "A synchronized retail ecosystem comprising a mobile Point of Sale (POS) and a web-based back-office admin panel. Led the end-to-end development of the POS system, engineering a real-time synchronization engine that updates inventory levels instantly across devices.",
+        "Retail ecosystem with mobile POS and web admin. I built a real-time sync engine to eliminate stock discrepancies instantly across devices.",
     },
     {
       title: "FLASH",
       role: "IoT & Backend Engineer",
-      stack: ["Raspberry Pi", "Python", "Node.js", "Hardware Sensors"],
+      stack: ["Raspberry Pi", "Python", "Node.js"],
+      image: "/flash_project.jpg",
       description:
-        "An IoT-enabled disaster response system designed to monitor environmental hazards in real-time. Built the hardware-software bridge by developing a Python server that processes telemetry data from environmental sensors, connecting to a Node.js dashboard for real-time alerts.",
-    },
-    {
-      title: "Allutional (Internal Projects)",
-      role: "Backend Developer",
-      stack: ["NestJS", "PostgreSQL", "Cloud Infrastructure"],
-      description:
-        "Enterprise software solutions requiring high availability and strict code quality standards. Managed server-side logic and database integrity while overseeing the deployment pipeline. Conducted code reviews to enforce architectural standards, resulting in a cleaner codebase and reduced technical debt.",
+        "IoT disaster response system. I bridged hardware and software, processing sensor data to visualize flood and fire risks in real-time.",
     },
   ],
 };

@@ -17,13 +17,15 @@ export const Projects = () => {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {portfolioData.projects.map((project, index) => (
-            <Reveal key={index} delay={index * 0.1}>
-              <GlassCard className="h-[400px] p-0 overflow-hidden group relative border-0">
-                {/* Background Image Placeholder */}
+            <Reveal key={index} delay={index * 0.1} width="100%">
+              <GlassCard className="h-[400px] p-0 overflow-hidden group relative border-0 w-full">
+                {/* Background Image */}
                 <div className="absolute inset-0 bg-slate-800 group-hover:scale-105 transition-transform duration-500">
-                    <div className="w-full h-full bg-gradient-to-br from-slate-700 to-slate-800 flex items-center justify-center text-slate-600 font-bold text-4xl opacity-20">
-                        {project.title.substring(0, 2)}
-                    </div>
+                    <img 
+                      src={project.image} 
+                      alt={project.title} 
+                      className="w-full h-full object-cover opacity-50 group-hover:opacity-30 transition-opacity duration-500"
+                    />
                 </div>
                 
                 {/* Overlay */}

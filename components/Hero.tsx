@@ -55,10 +55,11 @@ export const Hero = () => {
                 className="absolute inset-0 rounded-full border-2 border-transparent border-t-cyan-500 border-r-violet-500 blur-sm"
               />
               <div className="absolute inset-2 rounded-full bg-slate-800 overflow-hidden border border-white/10">
-                 {/* Placeholder Image */}
-                 <div className="w-full h-full bg-gradient-to-br from-slate-700 to-slate-900 flex items-center justify-center text-slate-500">
-                    Profile Image
-                 </div>
+                 <img 
+                    src={portfolioData.profile.image} 
+                    alt={portfolioData.profile.name}
+                    className="w-full h-full object-cover"
+                 />
               </div>
             </div>
           </Reveal>
