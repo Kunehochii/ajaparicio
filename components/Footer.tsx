@@ -17,18 +17,18 @@ export const Footer = () => {
         {/* Contact Section */}
         <div className="max-w-4xl mx-auto mb-20">
           <div className="text-center mb-12">
-            <Reveal>
+            <Reveal width="100%">
               <span className="text-sm font-medium text-gradient tracking-wider uppercase">
                 Get In Touch
               </span>
             </Reveal>
-            <Reveal delay={0.1}>
+            <Reveal delay={0.1} width="100%">
               <h2 className="text-4xl md:text-6xl font-bold mt-4 text-white">
                 Let's Build Something
                 <span className="text-gradient"> Amazing</span>
               </h2>
             </Reveal>
-            <Reveal delay={0.2}>
+            <Reveal delay={0.2} width="100%">
               <p className="text-white/60 mt-4 max-w-xl mx-auto text-lg">
                 I'm always open to discussing new projects, creative ideas, or
                 opportunities to be part of your vision.
@@ -38,48 +38,54 @@ export const Footer = () => {
 
           {/* Contact Cards */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <Reveal delay={0.3}>
+            <Reveal delay={0.3} width="100%">
               <motion.a
                 href={`mailto:${portfolioData.profile.email}`}
                 whileHover={{ y: -4, scale: 1.02 }}
-                className="gradient-border p-6 flex flex-col items-center text-center group"
+                className="gradient-border p-6 h-full flex flex-col items-center justify-center text-center group"
               >
                 <div className="p-3 rounded-2xl bg-gradient-to-br from-violet-500/20 to-purple-600/20 mb-4 group-hover:shadow-[0_0_30px_rgba(102,126,234,0.3)] transition-shadow">
                   <Mail className="w-6 h-6 text-violet-400" />
                 </div>
-                <h3 className="text-white font-semibold mb-1">Email</h3>
-                <p className="text-white/50 text-sm break-all">
+                <h3 className="text-white font-semibold mb-1 text-center">
+                  Email
+                </h3>
+                <p className="text-white/50 text-sm text-center break-all">
                   {portfolioData.profile.email}
                 </p>
               </motion.a>
             </Reveal>
 
-            <Reveal delay={0.4}>
+            <Reveal delay={0.4} width="100%">
               <motion.a
                 href={`tel:${portfolioData.profile.phone}`}
                 whileHover={{ y: -4, scale: 1.02 }}
-                className="gradient-border p-6 flex flex-col items-center text-center group"
+                className="gradient-border p-6 h-full flex flex-col items-center justify-center text-center group"
               >
                 <div className="p-3 rounded-2xl bg-gradient-to-br from-cyan-500/20 to-blue-600/20 mb-4 group-hover:shadow-[0_0_30px_rgba(0,245,160,0.3)] transition-shadow">
                   <Phone className="w-6 h-6 text-cyan-400" />
                 </div>
-                <h3 className="text-white font-semibold mb-1">Phone</h3>
-                <p className="text-white/50 text-sm">
+                <h3 className="text-white font-semibold mb-1 text-center">
+                  Phone
+                </h3>
+                <p className="text-white/50 text-sm text-center">
                   {portfolioData.profile.phone}
                 </p>
               </motion.a>
             </Reveal>
 
-            <Reveal delay={0.5}>
+            <Reveal delay={0.5} width="100%">
               <motion.div
                 whileHover={{ y: -4, scale: 1.02 }}
-                className="gradient-border p-6 flex flex-col items-center text-center group"
+                className="gradient-border p-6 h-full flex flex-col items-center justify-center text-center group"
               >
                 <div className="p-3 rounded-2xl bg-gradient-to-br from-pink-500/20 to-rose-600/20 mb-4 group-hover:shadow-[0_0_30px_rgba(240,147,251,0.3)] transition-shadow">
                   <MapPin className="w-6 h-6 text-pink-400" />
                 </div>
-                <h3 className="text-white font-semibold mb-1">Location</h3>
-                <p className="text-white/50 text-sm">
+                <h3 className="text-white font-semibold mb-1 text-center">
+                  Location
+                </h3>
+                <p className="text-white/50 text-sm text-center">
                   {portfolioData.profile.location}
                 </p>
               </motion.div>
@@ -87,7 +93,7 @@ export const Footer = () => {
           </div>
 
           {/* Social Links */}
-          <Reveal delay={0.6}>
+          <Reveal delay={0.6} width="100%">
             <div className="flex justify-center gap-4 mt-12">
               <motion.a
                 href={portfolioData.profile.socials.github}
