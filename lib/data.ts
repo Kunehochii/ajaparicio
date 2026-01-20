@@ -1,7 +1,7 @@
 export const portfolioData = {
   profile: {
-    name: "Anthony John Aparicio",
-    role: "Junior Backend Engineer",
+    name: "AJ Aparicio",
+    role: "Backend Engineer",
     location: "Iloilo City, Philippines",
     phone: "+63 969 100 0317",
     email: "aparicio.anthonyjohn@gmail.com",

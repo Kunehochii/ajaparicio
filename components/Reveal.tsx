@@ -1,17 +1,25 @@
 "use client";
 
-import { motion, useInView, useAnimation } from "framer-motion";
+import { motion, useInView, useAnimation, Variants } from "framer-motion";
 import { useEffect, useRef } from "react";
 
 interface RevealProps {
   children: React.ReactNode;
   width?: "fit-content" | "100%";
   delay?: number;
+  direction?: "up" | "down" | "left" | "right" | "none";
+  blur?: boolean;
 }
 
-export const Reveal = ({ children, width = "fit-content", delay = 0.25 }: RevealProps) => {
+export const Reveal = ({
+  children,
+  width = "fit-content",
+  delay = 0.25,
+  direction = "up",
+  blur = true,
+}: RevealProps) => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
   const mainControls = useAnimation();
 
   useEffect(() => {
@@ -20,16 +28,48 @@ export const Reveal = ({ children, width = "fit-content", delay = 0.25 }: Reveal
     }
   }, [isInView, mainControls]);
 
+  const getInitialPosition = () => {
+    switch (direction) {
+      case "up":
+        return { y: 50 };
+      case "down":
+        return { y: -50 };
+      case "left":
+        return { x: 50 };
+      case "right":
+        return { x: -50 };
+      case "none":
+        return {};
+      default:
+        return { y: 50 };
+    }
+  };
+
+  const variants: Variants = {
+    hidden: {
+      opacity: 0,
+      filter: blur ? "blur(10px)" : "blur(0px)",
+      ...getInitialPosition(),
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      x: 0,
+      filter: "blur(0px)",
+    },
+  };
+
   return (
     <div ref={ref} style={{ position: "relative", width }}>
       <motion.div
-        variants={{
-          hidden: { opacity: 0, y: 75 },
-          visible: { opacity: 1, y: 0 },
-        }}
+        variants={variants}
         initial="hidden"
         animate={mainControls}
-        transition={{ duration: 0.5, delay }}
+        transition={{
+          duration: 0.6,
+          delay,
+          ease: [0.23, 1, 0.32, 1],
+        }}
       >
         {children}
       </motion.div>

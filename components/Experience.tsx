@@ -2,45 +2,79 @@
 
 import { portfolioData } from "@/lib/data";
 import { Reveal } from "./Reveal";
-import { GlassCard } from "./GlassCard";
+import { motion } from "framer-motion";
+import { Briefcase, ChevronRight } from "lucide-react";
 
 export const Experience = () => {
   return (
-    <section id="experience" className="py-20 relative">
+    <section id="experience" className="py-24 relative">
       <div className="container mx-auto px-6">
-        <Reveal>
-          <h2 className="text-3xl font-bold mb-12 text-center text-slate-100">
-            Professional Experience
-          </h2>
-        </Reveal>
+        {/* Section Header */}
+        <div className="max-w-3xl mx-auto text-center mb-16">
+          <Reveal width="100%">
+            <span className="text-sm font-medium text-gradient tracking-wider uppercase">
+              Career Journey
+            </span>
+          </Reveal>
+          <Reveal delay={0.1} width="100%">
+            <h2 className="text-4xl md:text-5xl font-bold mt-4 text-white">
+              Professional
+              <span className="text-gradient"> Experience</span>
+            </h2>
+          </Reveal>
+        </div>
 
-        <div className="max-w-3xl mx-auto relative">
-          {/* Vertical Line */}
-          <div className="absolute left-0 md:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-violet-500/0 via-violet-500/50 to-violet-500/0" />
+        {/* Experience Timeline */}
+        <div className="max-w-4xl mx-auto">
+          <div className="relative">
+            {/* Gradient Line */}
+            <div className="absolute left-8 top-0 bottom-0 w-px bg-gradient-to-b from-violet-500/50 via-cyan-500/50 to-transparent" />
 
-          <div className="space-y-12">
-            {portfolioData.experience.map((exp, index) => (
-              <div key={index} className="relative grid md:grid-cols-2 gap-8">
-                {/* Timeline Dot */}
-                <div className="absolute left-[-5px] md:left-1/2 md:-ml-[5px] top-6 w-[10px] h-[10px] rounded-full bg-cyan-500 shadow-[0_0_10px_rgba(6,182,212,0.5)] z-10" />
+            <div className="space-y-6">
+              {portfolioData.experience.map((exp, index) => (
+                <Reveal key={index} delay={index * 0.1}>
+                  <motion.div
+                    whileHover={{ x: 8 }}
+                    transition={{ type: "spring", stiffness: 300, damping: 20 }}
+                    className="relative pl-20 group"
+                  >
+                    {/* Timeline Node */}
+                    <div className="absolute left-5 top-6 w-6 h-6 rounded-full bg-gray-950 border-2 border-violet-500/50 group-hover:border-cyan-500 group-hover:shadow-[0_0_20px_rgba(0,245,160,0.3)] transition-all duration-300">
+                      <div className="absolute inset-1 rounded-full bg-gradient-to-r from-violet-500 to-cyan-500 opacity-50 group-hover:opacity-100 transition-opacity" />
+                    </div>
 
-                {/* Content - Alternating sides for desktop */}
-                <div className={`${index % 2 === 0 ? "md:text-right md:pr-12" : "md:col-start-2 md:pl-12"} pl-8 md:pl-0`}>
-                  <Reveal delay={index * 0.1}>
-                    <GlassCard hoverEffect className="p-6">
-                      <h3 className="text-xl font-bold text-slate-100">{exp.role}</h3>
-                      <p className="text-violet-400 font-medium mb-2">{exp.company}</p>
-                      <p className="text-slate-400 text-sm leading-relaxed">
-                        {exp.description}
-                      </p>
-                    </GlassCard>
-                  </Reveal>
-                </div>
-                
-                {/* Empty div for grid balance */}
-                <div className={`${index % 2 === 0 ? "md:col-start-2" : "hidden md:block"}`} />
-              </div>
-            ))}
+                    {/* Card */}
+                    <div className="gradient-border p-6 group-hover:shadow-[0_0_40px_rgba(102,126,234,0.15)] transition-shadow duration-500">
+                      <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
+                        <div className="flex-1">
+                          <div className="flex items-center gap-2 mb-2">
+                            <Briefcase className="w-4 h-4 text-violet-400" />
+                            <span className="text-sm font-medium text-violet-400">
+                              {exp.company}
+                            </span>
+                          </div>
+                          <h3 className="text-xl font-bold text-white mb-3 group-hover:text-gradient transition-all duration-300">
+                            {exp.role}
+                          </h3>
+                          <p className="text-white/60 leading-relaxed">
+                            {exp.description}
+                          </p>
+                        </div>
+
+                        {/* Hover Arrow */}
+                        <motion.div
+                          initial={{ opacity: 0, x: -10 }}
+                          whileHover={{ x: 0 }}
+                          className="hidden md:flex items-center justify-center w-10 h-10 rounded-full bg-white/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                        >
+                          <ChevronRight className="w-5 h-5 text-white/60" />
+                        </motion.div>
+                      </div>
+                    </div>
+                  </motion.div>
+                </Reveal>
+              ))}
+            </div>
           </div>
         </div>
       </div>

@@ -8,7 +8,7 @@ import { Background } from "@/components/Background";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-slate-900 text-slate-200 selection:bg-cyan-500/30 relative">
+    <main className="min-h-screen bg-gray-950 text-white selection:bg-violet-500/30 relative overflow-x-hidden">
       <Background />
       <Navbar />
       <Hero />
