@@ -6,6 +6,7 @@ import { Reveal } from "./Reveal";
 import { motion } from "framer-motion";
 import { ArrowDown, MapPin, Sparkles } from "lucide-react";
 import { Github, Linkedin } from "lucide-react";
+import Image from "next/image";
 
 export const Hero = () => {
   return (
@@ -48,7 +49,7 @@ export const Hero = () => {
 
             <Reveal delay={0.2} width="100%">
               <h1 className="text-5xl md:text-7xl lg:text-8xl font-black leading-[0.9] mb-6 text-center">
-                <span className="text-white">Hi, I'm </span>
+                <span className="text-white">Hi, I&apos;m </span>
                 <span className="text-gradient">
                   {portfolioData.profile.name.split(" ")[0]}
                 </span>
@@ -133,10 +134,11 @@ export const Hero = () => {
 
                 {/* Image Container */}
                 <div className="absolute inset-2 rounded-full overflow-hidden border-2 border-white/10">
-                  <img
+                  <Image
                     src={portfolioData.profile.image}
                     alt={portfolioData.profile.name}
                     className="w-full h-full object-cover"
+                    fill
                   />
                 </div>
 

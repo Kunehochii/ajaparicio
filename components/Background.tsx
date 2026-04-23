@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 const generateParticles = (count: number) => {
   return Array.from({ length: count }, (_, i) => ({
@@ -15,13 +15,9 @@ const generateParticles = (count: number) => {
 };
 
 export const Background = () => {
-  const [particles, setParticles] = useState<
-    ReturnType<typeof generateParticles>
-  >([]);
-
-  useEffect(() => {
-    setParticles(generateParticles(50));
-  }, []);
+  const [particles] = useState<ReturnType<typeof generateParticles>>(() =>
+    generateParticles(50),
+  );
 
   return (
     <>

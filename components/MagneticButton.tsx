@@ -53,7 +53,7 @@ export const MagneticButton = ({
         variants[variant],
         className,
       )}
-      {...(props as any)}
+      {...(props as React.ComponentPropsWithoutRef<typeof motion.button>)}
     >
       {/* Shimmer Effect */}
       <div className="absolute inset-0 shimmer opacity-0 group-hover:opacity-100 transition-opacity duration-300" />

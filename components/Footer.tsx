@@ -24,13 +24,13 @@ export const Footer = () => {
             </Reveal>
             <Reveal delay={0.1} width="100%">
               <h2 className="text-4xl md:text-6xl font-bold mt-4 text-white">
-                Let's Build Something
+                Let&apos;s Build Something
                 <span className="text-gradient"> Amazing</span>
               </h2>
             </Reveal>
             <Reveal delay={0.2} width="100%">
               <p className="text-white/60 mt-4 max-w-xl mx-auto text-lg">
-                I'm always open to discussing new projects, creative ideas, or
+                I&apos;m always open to discussing new projects, creative ideas, or
                 opportunities to be part of your vision.
               </p>
             </Reveal>
