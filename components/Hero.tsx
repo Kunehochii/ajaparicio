@@ -53,8 +53,9 @@ export const Hero = () => {
                   {portfolioData.profile.name.split(" ")[0]}
                 </span>
                 <br />
-                <span className="text-white/90">
-                  {portfolioData.profile.role}
+                <span className="block text-3xl md:text-5xl lg:text-6xl text-white/90 mt-4">
+                  I specialize in{" "}
+                  <span className="text-gradient">Backend Engineering</span>
                 </span>
               </h1>
             </Reveal>

@@ -3,7 +3,7 @@
 import { portfolioData } from "@/lib/data";
 import { Reveal } from "./Reveal";
 import { motion } from "framer-motion";
-import { Github, Linkedin, Mail, MapPin, Phone, Heart } from "lucide-react";
+import { Github, Linkedin, Mail, MapPin, Heart } from "lucide-react";
 
 export const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -37,7 +37,7 @@ export const Footer = () => {
           </div>
 
           {/* Contact Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-2xl mx-auto">
             <Reveal delay={0.3} width="100%">
               <motion.a
                 href={`mailto:${portfolioData.profile.email}`}
@@ -57,24 +57,6 @@ export const Footer = () => {
             </Reveal>
 
             <Reveal delay={0.4} width="100%">
-              <motion.a
-                href={`tel:${portfolioData.profile.phone}`}
-                whileHover={{ y: -4, scale: 1.02 }}
-                className="gradient-border p-6 h-full flex flex-col items-center justify-center text-center group"
-              >
-                <div className="p-3 rounded-2xl bg-gradient-to-br from-cyan-500/20 to-blue-600/20 mb-4 group-hover:shadow-[0_0_30px_rgba(0,245,160,0.3)] transition-shadow">
-                  <Phone className="w-6 h-6 text-cyan-400" />
-                </div>
-                <h3 className="text-white font-semibold mb-1 text-center">
-                  Phone
-                </h3>
-                <p className="text-white/50 text-sm text-center">
-                  {portfolioData.profile.phone}
-                </p>
-              </motion.a>
-            </Reveal>
-
-            <Reveal delay={0.5} width="100%">
               <motion.div
                 whileHover={{ y: -4, scale: 1.02 }}
                 className="gradient-border p-6 h-full flex flex-col items-center justify-center text-center group"

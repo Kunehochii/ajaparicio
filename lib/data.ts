@@ -3,7 +3,6 @@ export const portfolioData = {
     name: "AJ Aparicio",
     role: "Backend Engineer",
     location: "Iloilo City, Philippines",
-    phone: "+63 969 100 0317",
     email: "aparicio.anthonyjohn@gmail.com",
     image: "/aj_formal.png",
     socials: {
@@ -17,38 +16,43 @@ export const portfolioData = {
       "I engineer high-performance systems for startups and enterprises, specializing in the PERN stack and Flutter.",
   },
   about:
-    "I build robust, user-centric applications where architecture meets utility. As a Full-Stack Engineer, I turn complex requirements into clean, type-safe code, prioritizing stability and speed.\n\nLeading development cycles and managing production DevOps has fast-tracked my growth. I thrive on integrating AI and IoT into practical workflows—solving real problems, from logistics to education.",
+    "I am a software engineer whose practice is anchored in backend architecture and full-stack delivery. My work centers on translating ambiguous business requirements into systems that are correct, maintainable, and built to scale — from gRPC-based microservices to AI-assisted mobile applications.\n\nAcross engagements with more than fifteen clients, I have led development cycles end-to-end: designing services, shepherding production deployments, and integrating emerging technologies such as computer vision and IoT into workflows that measurably reduce operational cost.",
   skills: {
-    backend: ["NestJS", "Node.js", "Python", "REST APIs", "Microservices"],
-    frontendMobile: ["Flutter", "Next.js", "React", "Tailwind CSS"],
-    database: ["PostgreSQL", "Prisma", "TypeORM", "Optimization"],
-    devOps: ["Docker", "CI/CD", "Linux", "Cloud"],
-    aiIot: ["OpenAI API", "Computer Vision", "Raspberry Pi", "Sensors"],
+    backend: ["NestJS", "Node.js", "Express.js", "Java Spring Boot", "Golang/Gin", "Rust/Axum", "Python", "PHP/Laravel"],
+    frontendMobile: ["Flutter (Dart)", "Next.js", "React", "React Native", "Tailwind CSS"],
+    database: ["PostgreSQL", "MongoDB", "Prisma ORM", "TypeORM", "GORM", "Query Optimization"],
+    apis: ["REST", "GraphQL", "gRPC", "Microservices"],
+    devOps: ["Docker", "CI/CD", "Linux", "AWS", "Azure", "Vercel", "Railway"],
+    aiIot: ["OpenAI API", "Computer Vision (YOLO)", "MLKit", "Raspberry Pi", "Arduino"],
   },
   experience: [
     {
-      role: "Backend Engineer",
+      role: "Backend Engineer II",
+      company: "MySchoolSuite",
+      period: "January 2026 – Present",
+      description:
+        "Refactored a NestJS monolith into gRPC-based microservices, reducing inter-service latency from 30 ms over HTTP to 2 ms. Led the design of a unified authentication service that now serves more than eighteen internal applications.",
+    },
+    {
+      role: "Full-Stack Engineer",
       company: "Allutional",
+      period: "October 2025 – April 2026",
       description:
-        "Engineered high-availability server-side apps with Express.js and Node.js. Managed deployment pipelines, enforced architectural standards, and optimized backend logic to consistently meet sprint goals.",
+        "Engineered low-latency Express.js and Node.js services paired with responsive Next.js interfaces, bridging backend systems to polished client experiences for a telehealth platform serving more than one hundred clients.",
     },
     {
-      role: "Junior Software Developer",
+      role: "Software Engineer",
       company: "Inertia Ltd.",
+      period: "June 2025 – October 2025",
       description:
-        "Led full-stack web and mobile development. Collaborated on feature planning and executed rigorous QA protocols to ensure bug-free, stable releases.",
+        "Owned full-stack feature delivery and contributed to product planning, aligning engineering effort with client goals. Executed rigorous QA protocols to surface edge cases prior to release for a userbase exceeding two hundred.",
     },
     {
-      role: "Freelance Developer",
-      company: "Self-Employed",
+      role: "Software Engineer",
+      company: "Freelance",
+      period: "2021 – Present",
       description:
-        "Delivered bespoke software solutions across industries. Managed the full lifecycle from concept to handoff, focusing on operational efficiency and client satisfaction.",
-    },
-    {
-      role: "QA Tester & Planner",
-      company: "Yaichi",
-      description:
-        "Aligned business logistics with technical feasibility. Executed critical QA testing to catch edge cases, preventing costly errors in cross-border shipping logic.",
+        "Delivered more than fifteen bespoke engagements across industries, owning each project from discovery through deployment. Consistently prioritized operational efficiency and measurable performance outcomes.",
     },
   ],
   projects: [
@@ -58,7 +62,7 @@ export const portfolioData = {
       stack: ["Next.js", "NestJS", "PostgreSQL", "Docker"],
       image: "/baylocentral_project.png",
       description:
-        "A digital marketplace for MSMEs. I architected the full-stack infrastructure and containerized DevOps, enabling local merchants to expand beyond physical stores.",
+        "A digital marketplace for MSMEs. Architected the full-stack infrastructure and containerized DevOps, enabling local merchants to expand beyond physical stores.",
       github: "https://github.com/ajaparicio36/baylocentral-stable",
     },
     {
@@ -67,7 +71,7 @@ export const portfolioData = {
       stack: ["Flutter", "OpenAI API", "Python"],
       image: "/snapscore_project.jpg",
       description:
-        "AI-powered grading app. I integrated OpenAI's vision to convert physical test images into structured data, automating grading for educators.",
+        "AI-powered grading application. Integrated OpenAI vision capabilities to convert physical test images into structured, auto-graded data for educators.",
       github: "https://github.com/TUPV-SnapScore/snapscore-android",
     },
     {
@@ -76,7 +80,7 @@ export const portfolioData = {
       stack: ["Flutter", "React", "NestJS"],
       image: "/falsisters_project.png",
       description:
-        "Retail ecosystem with mobile POS and web admin. I built a real-time sync engine to eliminate stock discrepancies instantly across devices.",
+        "A unified mobile POS application and back-office system, digitizing inventory tracking and sales management for rice trading operations.",
       github: "https://github.com/falsisters/pos-server",
     },
     {
@@ -85,7 +89,7 @@ export const portfolioData = {
       stack: ["Raspberry Pi", "Python", "Node.js"],
       image: "/flash_project.jpg",
       description:
-        "IoT disaster response system. I bridged hardware and software, processing sensor data to visualize flood in real-time.",
+        "IoT disaster response system. Bridged hardware and software, processing sensor data to visualize flood conditions in real time.",
       github: "https://github.com/Kunehochii/floodwatch-server",
     },
     {
@@ -94,7 +98,7 @@ export const portfolioData = {
       stack: ["Next.js", "Prisma", "PostgreSQL"],
       image: "/geotraizer_project.png",
       description:
-        "A map-focused and visualized project management system for Iloilo Province, developed for the PGENRO provincial office. I built the fullstack system from development to deployment.",
+        "A map-focused project management system for Iloilo Province, developed for the PGENRO provincial office. Built the full-stack system from development through deployment.",
       github: "https://github.com/ajaparicio36/pgenro-isf",
       url: "https://geotraizer.vercel.app",
     },
@@ -104,7 +108,7 @@ export const portfolioData = {
       stack: ["Flutter", "Express"],
       image: "/clickclick_project.png",
       description:
-        "A photobooth application for Windows with an Express backend for soft copy online service delivery.",
+        "Full-stack photobooth infrastructure developed from concept through physical store deployment, now serving thousands of users with daily sessions.",
       github: "https://github.com/ajaparicio36/photocafe_windows",
     },
     {
@@ -113,8 +117,46 @@ export const portfolioData = {
       stack: ["Next.js", "Flutter", "NestJS", "PostgreSQL", "Supabase"],
       image: "/nexlock_project.png",
       description:
-        "An IoT-enabled locker system allowing users to rent, lock, unlock, and checkout lockers from their mobile. I developed the entire ecosystem including server, mobile app, and admin web application.",
+        "IoT-enabled smart locker system allowing users to rent, lock, unlock, and checkout lockers via mobile. Developed the entire ecosystem including server, mobile application, and admin web portal.",
       github: "https://github.com/Nexlock/nexlock_app_v2",
+    },
+  ],
+  certifications: [
+    {
+      title: "L'Oréal Brandstorm Nationals 2025",
+      issuer: "L'Oréal",
+      year: "2025",
+      detail: "Team Software Developer — National Champion",
+    },
+    {
+      title: "L'Oréal Brandstorm Nationals 2026",
+      issuer: "L'Oréal",
+      year: "2026",
+      detail: "Team Software Developer — 1st Runner-Up",
+    },
+    {
+      title: "Iloilo Province Hackathon 2025",
+      issuer: "Province of Iloilo",
+      year: "2025",
+      detail: "3rd Place Winner",
+    },
+    {
+      title: "TOPCIT Korea Certification",
+      issuer: "Korean Ministry of Science and ICT",
+      year: "2025",
+      detail: "Level 3",
+    },
+    {
+      title: "CPUGAD Startup Incubatee",
+      issuer: "Central Philippine University",
+      year: "2025",
+      detail: "BayloCentral and NexLock — Accepted into the startup incubation program",
+    },
+    {
+      title: "GameON! Game Development Hackathon",
+      issuer: "GameON!",
+      year: "2024",
+      detail: "Participant",
     },
   ],
 };

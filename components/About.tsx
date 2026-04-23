@@ -3,12 +3,22 @@
 import { portfolioData } from "@/lib/data";
 import { Reveal } from "./Reveal";
 import { motion } from "framer-motion";
-import { Code2, Database, Cloud, Cpu, Layers } from "lucide-react";
+import { Code2, Database, Cloud, Cpu, Layers, Network } from "lucide-react";
+
+const skillLabels: Record<string, string> = {
+  backend: "Backend",
+  frontendMobile: "Frontend/Mobile",
+  database: "Databases",
+  apis: "APIs & Services",
+  devOps: "DevOps & Cloud",
+  aiIot: "AI & IoT",
+};
 
 const skillIcons: Record<string, React.ReactNode> = {
   backend: <Code2 className="w-5 h-5" />,
   frontendMobile: <Layers className="w-5 h-5" />,
   database: <Database className="w-5 h-5" />,
+  apis: <Network className="w-5 h-5" />,
   devOps: <Cloud className="w-5 h-5" />,
   aiIot: <Cpu className="w-5 h-5" />,
 };
@@ -17,6 +27,7 @@ const skillColors: Record<string, string> = {
   backend: "from-violet-500 to-purple-600",
   frontendMobile: "from-cyan-500 to-blue-600",
   database: "from-emerald-500 to-teal-600",
+  apis: "from-amber-500 to-orange-600",
   devOps: "from-orange-500 to-red-600",
   aiIot: "from-pink-500 to-rose-600",
 };
@@ -54,9 +65,7 @@ export const About = () => {
               <Reveal key={category} delay={0.1 * index}>
                 <motion.div
                   whileHover={{ y: -4 }}
-                  className={`bento-item gradient-border p-6 h-full ${
-                    index === 0 ? "lg:col-span-2" : ""
-                  }`}
+                  className="bento-item gradient-border p-6 h-full"
                 >
                   {/* Header */}
                   <div className="flex items-center gap-3 mb-5">
@@ -65,8 +74,8 @@ export const About = () => {
                     >
                       <span className="text-white">{skillIcons[category]}</span>
                     </div>
-                    <h3 className="text-lg font-semibold text-white capitalize">
-                      {category.replace(/([A-Z])/g, " $1").trim()}
+                    <h3 className="text-lg font-semibold text-white">
+                      {skillLabels[category]}
                     </h3>
                   </div>
 

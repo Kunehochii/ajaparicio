@@ -47,11 +47,18 @@ export const Experience = () => {
                     <div className="gradient-border p-6 group-hover:shadow-[0_0_40px_rgba(102,126,234,0.15)] transition-shadow duration-500">
                       <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
                         <div className="flex-1">
-                          <div className="flex items-center gap-2 mb-2">
-                            <Briefcase className="w-4 h-4 text-violet-400" />
-                            <span className="text-sm font-medium text-violet-400">
-                              {exp.company}
-                            </span>
+                          <div className="flex items-center flex-wrap gap-x-3 gap-y-1 mb-2">
+                            <div className="flex items-center gap-2">
+                              <Briefcase className="w-4 h-4 text-violet-400" />
+                              <span className="text-sm font-medium text-violet-400">
+                                {exp.company}
+                              </span>
+                            </div>
+                            {exp.period && (
+                              <span className="text-xs text-white/40 font-medium">
+                                {exp.period}
+                              </span>
+                            )}
                           </div>
                           <h3 className="text-xl font-bold text-white mb-3 group-hover:text-gradient transition-all duration-300">
                             {exp.role}
